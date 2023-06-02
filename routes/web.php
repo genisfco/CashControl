@@ -16,3 +16,18 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/registerU', function () {
+    return view('registerUser');
+});
+Route::get('/registerE', function () {
+    return view('registerEarnedValue');
+});
+Route::get('/registerA', function () {
+    return view('registerAmountSpent');
+});
+Route::get('/menu', function () {
+    return view('menu');
+});
+Route::get('/extract', function () {
+    return view('extract');
+});
