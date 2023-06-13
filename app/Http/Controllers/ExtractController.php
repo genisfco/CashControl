@@ -12,7 +12,8 @@ class ExtractController extends Controller
      */
     public function index()
     {
-        //  NÃO HAVERÁ
+        $extract = Extract::all();
+        return view('extract')->with('students', $students);
     }
 
     /**
@@ -67,6 +68,7 @@ class ExtractController extends Controller
      */
     public function destroy(Extract $extract)
     {
-        //
+        AmountSpent::destroy($id);
+        return redirect('AmountSpentController')->with('flash_message', 'User deleted!');  
     }
 }

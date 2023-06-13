@@ -20,7 +20,7 @@ class AmountSpentController extends Controller
      */
     public function create()
     {
-        //
+        return view('registerAmountSpent');
     }
 
     /**
@@ -28,7 +28,9 @@ class AmountSpentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $input = $request->all();
+        Amount::create($input);
+        return redirect('AmountSpentController')->with('flash_message', 'Student Addedd!');  
     }
 
     /**
@@ -60,6 +62,6 @@ class AmountSpentController extends Controller
      */
     public function destroy(AmountSpent $amountSpent)
     {
-        //  NÃO HAVERÁ
+
     }
 }
