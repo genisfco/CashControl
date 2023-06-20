@@ -31,3 +31,8 @@ Route::get('/menu', function () {
 Route::get('/extract', function () {
     return view('extract');
 });
+Route::get('/chart', function () {
+    return view('chart', [
+        'chartData' => [] // Preencha aqui com os dados do gráfico fornecidos pelo usuário
+    ]);
+});
