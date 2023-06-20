@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,23 +17,24 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/registerU', function () {
-    return view('registerUser');
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::get('/login', function () {
+    return view('welcome');
 });
-Route::get('/registerE', function () {
-    return view('registerEarnedValue');
+
+Route::get('/register', function () {
+    return view('welcome');
 });
-Route::get('/registerA', function () {
-    return view('registerAmountSpent');
+
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
-Route::get('/menu', function () {
-    return view('menu');
-});
-Route::get('/extract', function () {
-    return view('extract');
-});
-Route::get('/chart', function () {
-    return view('chart', [
-        'chartData' => [] // Preencha aqui com os dados do gráfico fornecidos pelo usuário
-    ]);
-});
+
+require __DIR__.'/auth.php';
