@@ -32,11 +32,8 @@ Route::get('/register', function () {
 
 Route::get('/chart', function () {
     return view('chart');
-});
+})->middleware(['auth', 'verified'])->name('chart');
 
-Route::get('/registerU', function () {
-    return view('registerUser');
-});
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
