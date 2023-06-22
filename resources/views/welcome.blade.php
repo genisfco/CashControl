@@ -29,12 +29,12 @@
           </div>
         </div>
         <div>
-          <button type="submit" class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Logar</button>
+          <a href="chart" class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Logar</a>
         </div>
       </form>
       <p class="mt-10 text-center text-sm text-white-500">
         ->
-        <a href="../registerU" class="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">Cadastrar-se</a>
+        <a href="registerU" class="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">Cadastrar-se</a>
       </p>
     </div>
   </div>
