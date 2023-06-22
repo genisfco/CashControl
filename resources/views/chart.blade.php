@@ -4,12 +4,13 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>CashControl</title>
   <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <main>
+    <h2>Resumo Financeiro</h2>
     <div class="resume">
       <div>
         Entradas: R$
@@ -24,6 +25,7 @@
         <span class="total">0.00</span>
       </div>
     </div>
+    <h2>Incluir Novo Registro</h2>
     <div class="newItem">
       <div class="divDesc">
         <label for="desc">Descrição</label>
@@ -42,6 +44,7 @@
       </div>
       <button id="btnNew">Incluir</button>
     </div>
+    <h2>Lista Entradas e Saídas</h2>
     <div class="divTable">
       <table>
         <thead>
